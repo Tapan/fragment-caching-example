@@ -1,8 +1,11 @@
-<h1>All Posts</h1>
+<h3>All Posts</h3>
 
-<%= link_to "Add new post", new_post_path, class: "btn btn-primary" %>
+<div class="row">
+  <%= link_to "Add new post", new_post_path, class: "btn btn-primary m-t pull-right" %>
+</div>
 
-<table>
+
+<table class="table m-t">
   <thead>
     <tr>
       <th>
@@ -20,8 +23,10 @@
           <%= link_to post.title, post %>
         </td>
         <td>
-          <%= link_to "Edit", edit_post_path(post) %>
-          <%= link_to "Destroy", post, method: :delete, data: { confirm: "Are you sure?" } %>
+          <div class="btn-group btn-group-xs" role="group" aria-label="...">
+            <%= link_to "Edit", edit_post_path(post), class: "btn btn-primary" %>
+            <%= link_to "Destroy", post, class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+          </div>
         </td>
       </tr>
     <% end %>

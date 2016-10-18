@@ -1,5 +1,7 @@
-<h1>Editing: <%= @post.title %></h1>
+<h3>Editing: <%= @post.title %></h3>
 
-<%= render "form" %>
+<%= link_to "<< Back", @post %>
 
-<%= link_to "Back", @post %>
+<div class="m-t">
+  <%= render "form" %>
+</div>

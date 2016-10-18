@@ -1,4 +1,8 @@
-<p>
-  <%= comment.body %>
-  <%= link_to "Delete comment", post_comment_path(comment.post, comment), method: :delete, data: { confirm: "Are you sure?" } %>
-</p>
+<div class="well">
+  <p>
+    <%= comment.body %>
+  </p>
+  <p>
+    <%= link_to "Delete comment", post_comment_path(comment.post, comment), class: "btn btn-danger btn-xs", method: :delete, data: { confirm: "Are you sure?" } %>
+  </p>
+</div>
