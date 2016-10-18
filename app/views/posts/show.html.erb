@@ -7,7 +7,7 @@
 
   <h4>Comments</h4>
 
-  <%= render @post.comments, cached: true %>
+  <%= render partial: "comments/comment", collection: @post.comments, cached: true %>
 
   <h5 class="m-t">Add New Comment</h5>
 
