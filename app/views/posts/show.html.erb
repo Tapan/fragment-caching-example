@@ -1,0 +1,16 @@
+<h1><%= @post.title %></h1>
+
+<p>
+  <%= @post.body %>
+</p>
+
+<h2>Comments</h2>
+
+<%= render @post.comments %>
+
+<h3>New Comment</h3>
+
+<%= simple_form_for [@post, Comment.new] do |f| %>
+  <%= f.input :body %>
+  <%= f.submit class: "btn btn-success btn-sm" %>
+<% end %>
