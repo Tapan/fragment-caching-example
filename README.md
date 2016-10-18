@@ -8,3 +8,4 @@ This is an example application for Ragnarson blog post about fragment caching. I
 1. Run `bundle` command inside the application directory
 1. Run `rails db:setup` to setup the database and add sample posts and comments
 1. To test caching type `rails dev:cache` in the terminal and press enter. Type the command again to disable caching in development mode.
+1. Currently, the cache option is turned on in posts show partial.
