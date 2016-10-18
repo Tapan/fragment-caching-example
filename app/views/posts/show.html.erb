@@ -1,18 +1,20 @@
-<h3><%= @post.title %></h3>
+<% cache @post do %>
+  <h3><%= @post.title %></h3>
 
-<div class="well">
-  <%= @post.body %>
-</div>
-
-<h4>Comments</h4>
-
-<%= render @post.comments %>
-
-<h5 class="m-t">Add New Comment</h5>
-
-<%= simple_form_for [@post, Comment.new] do |f| %>
-  <div class="form-group">
-    <%= f.input :body, as: :text, input_html: { class: "form-control", rows: 5 } %>
+  <div class="well">
+    <%= @post.body %>
   </div>
-  <%= f.submit class: "btn btn-success btn-sm" %>
+
+  <h4>Comments</h4>
+
+  <%= render @post.comments, cached: true %>
+
+  <h5 class="m-t">Add New Comment</h5>
+
+  <%= simple_form_for [@post, Comment.new] do |f| %>
+    <div class="form-group">
+      <%= f.input :body, as: :text, input_html: { class: "form-control", rows: 5 } %>
+    </div>
+    <%= f.submit class: "btn btn-success btn-sm" %>
+  <% end %>
 <% end %>
