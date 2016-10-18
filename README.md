@@ -1,24 +1,10 @@
-# README
+# Rails Fragment Caching Example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example application for Ragnarson blog post about fragment caching. It is a very simple application displaying posts with comments. It's aim is to show how fragment caching in Rails works and make a quick sandbox for anyone wanting to experiment with this concept.
 
-Things you may want to cover:
+## Getting started
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone the application with `git clone`
+1. Run `bundle` command inside the application directory
+1. Run `rails db:setup` to setup the database and add sample posts and comments
+1. To test caching type `rails dev:cache` in the terminal and press enter. Type the command again to disable caching in development mode.
